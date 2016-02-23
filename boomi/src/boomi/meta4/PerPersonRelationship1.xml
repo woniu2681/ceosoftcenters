@@ -1,0 +1,27 @@
+<SFOData.PerPersonRelationship>
+   <relatedPersonIdExternal>72310_d72650</relatedPersonIdExternal>
+   <personIdExternal>90181</personIdExternal>
+   <lastName>Jones</lastName>
+   <firstName>Lyle</firstName>
+   <relPersonNav>
+      <personIdExternal>72310_d72650</personIdExternal>
+      <dateOfBirth>1988-11-20</dateOfBirth>
+      <lastModifiedOn>2015-12-17T15:29:17.000Z</lastModifiedOn>
+      <lastModifiedDateTime>2015-12-17T20:29:17.000Z</lastModifiedDateTime>
+      <dateOfDeath></dateOfDeath>
+      <createdOn>2015-12-17T15:16:56.000Z</createdOn>
+      <countryOfBirth>FRA</countryOfBirth>
+      <createdBy>lgadmin</createdBy>
+      <createdDateTime>2015-12-17T20:16:56.000Z</createdDateTime>
+      <lastModifiedBy>lgadmin</lastModifiedBy>
+      <personRerlationshipNav></personRerlationshipNav>
+      <emergencyContactNav></emergencyContactNav>
+      <phoneNav></phoneNav>
+      <personalInfoNav></personalInfoNav>
+      <homeAddressNavDEFLT></homeAddressNavDEFLT>
+      <nationalIdNav></nationalIdNav>
+      <countryOfBirthNav></countryOfBirthNav>
+      <emailNav></emailNav>
+      <employmentNav></employmentNav>
+   </relPersonNav>
+</SFOData.PerPersonRelationship>

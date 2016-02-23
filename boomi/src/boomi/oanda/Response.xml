@@ -1,0 +1,154 @@
+<soap-env:Envelope xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/">
+   <soap-env:Header></soap-env:Header>
+   <soap-env:Body>
+      <n0:ExchangeRateBundleMaintainConfirmation_sync xmlns:n0="http://sap.com/xi/SAPGlobal20/Global" xmlns:prx="urn:sap.com:proxy:LBY:/1SAI/TAE4D7CA9523356A2F1EB24:804">
+         <Log>
+            <MaximumLogItemSeverityCode>1</MaximumLogItemSeverityCode>
+            <Item>
+               <TypeID>022(/CL_CER_MSG/)</TypeID>
+               <CategoryCode>INC.BOI</CategoryCode>
+               <SeverityCode>1</SeverityCode>
+               <Note>Exchange rate for Argentine Peso-Danish Krone for category code Bid Rate dated 12/02/2015 12:00:00 AM UTC already specified</Note>
+            </Item>
+            <Item>
+               <TypeID>022(/CL_CER_MSG/)</TypeID>
+               <CategoryCode>INC.BOI</CategoryCode>
+               <SeverityCode>1</SeverityCode>
+               <Note>Exchange rate for Argentine Peso-Danish Krone for category code Mid Rate dated 12/02/2015 12:00:00 AM UTC already specified</Note>
+            </Item>
+            <Item>
+               <TypeID>022(/CL_CER_MSG/)</TypeID>
+               <CategoryCode>INC.BOI</CategoryCode>
+               <SeverityCode>1</SeverityCode>
+               <Note>Exchange rate for Argentine Peso-Danish Krone for category code Ask Rate dated 12/02/2015 12:00:00 AM UTC already specified</Note>
+            </Item>
+            <Item>
+               <TypeID>022(/CL_CER_MSG/)</TypeID>
+               <CategoryCode>INC.BOI</CategoryCode>
+               <SeverityCode>1</SeverityCode>
+               <Note>Exchange rate for Argentine Peso-Colombian Peso for category code Bid Rate dated 12/02/2015 12:00:00 AM UTC already specified</Note>
+            </Item>
+            <Item>
+               <TypeID>022(/CL_CER_MSG/)</TypeID>
+               <CategoryCode>INC.BOI</CategoryCode>
+               <SeverityCode>1</SeverityCode>
+               <Note>Exchange rate for Argentine Peso-Colombian Peso for category code Mid Rate dated 12/02/2015 12:00:00 AM UTC already specified</Note>
+            </Item>
+            <Item>
+               <TypeID>022(/CL_CER_MSG/)</TypeID>
+               <CategoryCode>INC.BOI</CategoryCode>
+               <SeverityCode>1</SeverityCode>
+               <Note>Exchange rate for Argentine Peso-Colombian Peso for category code Ask Rate dated 12/02/2015 12:00:00 AM UTC already specified</Note>
+            </Item>
+            <Item>
+               <TypeID>022(/CL_CER_MSG/)</TypeID>
+               <CategoryCode>INC.BOI</CategoryCode>
+               <SeverityCode>1</SeverityCode>
+               <Note>Exchange rate for Argentine Peso-Chilean Peso for category code Bid Rate dated 12/02/2015 12:00:00 AM UTC already specified</Note>
+            </Item>
+            <Item>
+               <TypeID>022(/CL_CER_MSG/)</TypeID>
+               <CategoryCode>INC.BOI</CategoryCode>
+               <SeverityCode>1</SeverityCode>
+               <Note>Exchange rate for Argentine Peso-Chilean Peso for category code Mid Rate dated 12/02/2015 12:00:00 AM UTC already specified</Note>
+            </Item>
+            <Item>
+               <TypeID>022(/CL_CER_MSG/)</TypeID>
+               <CategoryCode>INC.BOI</CategoryCode>
+               <SeverityCode>1</SeverityCode>
+               <Note>Exchange rate for Argentine Peso-Chilean Peso for category code Ask Rate dated 12/02/2015 12:00:00 AM UTC already specified</Note>
+            </Item>
+            <Item>
+               <TypeID>022(/CL_CER_MSG/)</TypeID>
+               <CategoryCode>INC.BOI</CategoryCode>
+               <SeverityCode>1</SeverityCode>
+               <Note>Exchange rate for Argentine Peso-Swiss Franc for category code Bid Rate dated 12/02/2015 12:00:00 AM UTC already specified</Note>
+            </Item>
+            <Item>
+               <TypeID>022(/CL_CER_MSG/)</TypeID>
+               <CategoryCode>INC.BOI</CategoryCode>
+               <SeverityCode>1</SeverityCode>
+               <Note>Exchange rate for Argentine Peso-Swiss Franc for category code Mid Rate dated 12/02/2015 12:00:00 AM UTC already specified</Note>
+            </Item>
+            <Item>
+               <TypeID>022(/CL_CER_MSG/)</TypeID>
+               <CategoryCode>INC.BOI</CategoryCode>
+               <SeverityCode>1</SeverityCode>
+               <Note>Exchange rate for Argentine Peso-Swiss Franc for category code Ask Rate dated 12/02/2015 12:00:00 AM UTC already specified</Note>
+            </Item>
+            <Item>
+               <TypeID>022(/CL_CER_MSG/)</TypeID>
+               <CategoryCode>INC.BOI</CategoryCode>
+               <SeverityCode>1</SeverityCode>
+               <Note>Exchange rate for Argentine Peso-Canadian Dollar for category code Bid Rate dated 12/02/2015 12:00:00 AM UTC already specified</Note>
+            </Item>
+            <Item>
+               <TypeID>022(/CL_CER_MSG/)</TypeID>
+               <CategoryCode>INC.BOI</CategoryCode>
+               <SeverityCode>1</SeverityCode>
+               <Note>Exchange rate for Argentine Peso-Canadian Dollar for category code Mid Rate dated 12/02/2015 12:00:00 AM UTC already specified</Note>
+            </Item>
+            <Item>
+               <TypeID>022(/CL_CER_MSG/)</TypeID>
+               <CategoryCode>INC.BOI</CategoryCode>
+               <SeverityCode>1</SeverityCode>
+               <Note>Exchange rate for Argentine Peso-Canadian Dollar for category code Ask Rate dated 12/02/2015 12:00:00 AM UTC already specified</Note>
+            </Item>
+            <Item>
+               <TypeID>022(/CL_CER_MSG/)</TypeID>
+               <CategoryCode>INC.BOI</CategoryCode>
+               <SeverityCode>1</SeverityCode>
+               <Note>Exchange rate for Argentine Peso-Brazilian Real for category code Bid Rate dated 12/02/2015 12:00:00 AM UTC already specified</Note>
+            </Item>
+            <Item>
+               <TypeID>022(/CL_CER_MSG/)</TypeID>
+               <CategoryCode>INC.BOI</CategoryCode>
+               <SeverityCode>1</SeverityCode>
+               <Note>Exchange rate for Argentine Peso-Brazilian Real for category code Mid Rate dated 12/02/2015 12:00:00 AM UTC already specified</Note>
+            </Item>
+            <Item>
+               <TypeID>022(/CL_CER_MSG/)</TypeID>
+               <CategoryCode>INC.BOI</CategoryCode>
+               <SeverityCode>1</SeverityCode>
+               <Note>Exchange rate for Argentine Peso-Brazilian Real for category code Ask Rate dated 12/02/2015 12:00:00 AM UTC already specified</Note>
+            </Item>
+            <Item>
+               <TypeID>022(/CL_CER_MSG/)</TypeID>
+               <CategoryCode>INC.BOI</CategoryCode>
+               <SeverityCode>1</SeverityCode>
+               <Note>Exchange rate for Argentine Peso-Bulgarian Lev for category code Bid Rate dated 12/02/2015 12:00:00 AM UTC already specified</Note>
+            </Item>
+            <Item>
+               <TypeID>022(/CL_CER_MSG/)</TypeID>
+               <CategoryCode>INC.BOI</CategoryCode>
+               <SeverityCode>1</SeverityCode>
+               <Note>Exchange rate for Argentine Peso-Bulgarian Lev for category code Mid Rate dated 12/02/2015 12:00:00 AM UTC already specified</Note>
+            </Item>
+            <Item>
+               <TypeID>022(/CL_CER_MSG/)</TypeID>
+               <CategoryCode>INC.BOI</CategoryCode>
+               <SeverityCode>1</SeverityCode>
+               <Note>Exchange rate for Argentine Peso-Bulgarian Lev for category code Ask Rate dated 12/02/2015 12:00:00 AM UTC already specified</Note>
+            </Item>
+            <Item>
+               <TypeID>022(/CL_CER_MSG/)</TypeID>
+               <CategoryCode>INC.BOI</CategoryCode>
+               <SeverityCode>1</SeverityCode>
+               <Note>Exchange rate for Argentine Peso-Australian Dollar for category code Bid Rate dated 12/02/2015 12:00:00 AM UTC already specified</Note>
+            </Item>
+            <Item>
+               <TypeID>022(/CL_CER_MSG/)</TypeID>
+               <CategoryCode>INC.BOI</CategoryCode>
+               <SeverityCode>1</SeverityCode>
+               <Note>Exchange rate for Argentine Peso-Australian Dollar for category code Mid Rate dated 12/02/2015 12:00:00 AM UTC already specified</Note>
+            </Item>
+            <Item>
+               <TypeID>022(/CL_CER_MSG/)</TypeID>
+               <CategoryCode>INC.BOI</CategoryCode>
+               <SeverityCode>1</SeverityCode>
+               <Note>Exchange rate for Argentine Peso-Australian Dollar for category code Ask Rate dated 12/02/2015 12:00:00 AM UTC already specified</Note>
+            </Item>
+         </Log>
+      </n0:ExchangeRateBundleMaintainConfirmation_sync>
+   </soap-env:Body>
+</soap-env:Envelope>

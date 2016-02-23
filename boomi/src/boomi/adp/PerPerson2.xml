@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<PerPerson>
+  <personIdExternal>555273</personIdExternal>
+  <PerPersonRelationship>
+    <relatedPersonIdExternal>USADEP1173</relatedPersonIdExternal>
+    <startDate>2011-04-11</startDate>
+    <relationshipType>2836</relationshipType>
+    <firstName>Kaylee</firstName>
+    <lastName>Test</lastName>
+    <dateOfBirth>2007-04-23</dateOfBirth>
+    <gender>F</gender>
+  </PerPersonRelationship>
+</PerPerson>

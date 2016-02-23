@@ -1,0 +1,93 @@
+externalCode|en_US|status
+LOAADOP|Adoption|ACTIVE
+LOAFMLA|Family Medical Leave|ACTIVE
+LOAFURLOU|Furlough|ACTIVE
+LOALTS|Medical Leave Paid|ACTIVE
+LOAMAT|Maternity Leave|ACTIVE
+LOAMIL|Military Leave|ACTIVE
+LOAPAR|Parental Leave|ACTIVE
+LOAPAT|Paternity Leave|ACTIVE
+LOAPERS|Personal Leave|ACTIVE
+LOATRAWK|Work Accident Leave|ACTIVE
+LOATRMTU|Mandated Union Leave|ACTIVE
+LOAUML|Medical Leave Unpaid|ACTIVE
+LVRTN|Return from Leave|ACTIVE
+NH|New Hire|ACTIVE
+POSA1PROMO|Promotion|ACTIVE
+POSA1PROMO1|Promotion|ACTIVE
+POSA2DEMO|Demotion|ACTIVE
+POSA2DEMO1|Demotion|ACTIVE
+POSBILING|Bilingual Pay Adjustment|ACTIVE
+POSCOLBAR|Collect Bargin Agrmt Increase|ACTIVE
+POSDEPT|Organization Unit Change|ACTIVE
+POSDEPT1|Organization Unit Change|ACTIVE
+POSEND|Temp Assigment End|ACTIVE
+POSEND1|Temp Assigment End|ACTIVE
+POSEQ|Equity Increase|ACTIVE
+POSMARKET|Market Adjustment|ACTIVE
+POSMINWAG|Legal Increase|ACTIVE
+POSOCP|Operation Check Point Rate|ACTIVE
+POSPERF|Sitel Merit Program|ACTIVE
+POSPERM|Temp to Perm|ACTIVE
+POSPERM1|Temp to Perm|ACTIVE
+POSPROD|Production Floor Rate|ACTIVE
+POSREA|Reassignment|ACTIVE
+POSREA1|Reassignment|ACTIVE
+POSREHIRE|Rehire|ACTIVE
+POSREORG|Reorganization|ACTIVE
+POSRET|Retention Rate Increase|ACTIVE
+POSSHIFT|Shift Differential Pay|ACTIVE
+POSTEMP|Temporary Assignment|ACTIVE
+POSTEMP1|Temporary Assignment|ACTIVE
+POSTITLE|Job Title Change Only|ACTIVE
+POSTITLE1|Job Title Change Only|ACTIVE
+POSTRAIN|Training Complete|ACTIVE
+POSTRSPL|Work Location Change Only|ACTIVE
+POSTT1|Track Training Phase 1|ACTIVE
+POSTT2|Track Training Phase 2|ACTIVE
+POSTT3|Track Training Phase 3|ACTIVE
+POSTT4|Track Training Phase 4|ACTIVE
+STEP12|12 Month Metrics|ACTIVE
+STEP180|180 Day Metrics|ACTIVE
+STEP2|2 Year Metrics|ACTIVE
+STEP240|240 Day Metrics|ACTIVE
+STEP3|3+ Year Metrics|ACTIVE
+STEP30|30 Day Metrics|ACTIVE
+STEP420|420 Day Metrics|ACTIVE
+STEP60|60 Day Metrics|ACTIVE
+STEP90|90 Day Metrics|ACTIVE
+STEPMAX|Step Range Maximum|ACTIVE
+STHD|Hours Decreased|ACTIVE
+STHD1|Hours Decreased|ACTIVE
+STHI|Hours Increased|ACTIVE
+STHI1|Hours Increased|ACTIVE
+STRTNSZ|Return from Suspension|ACTIVE
+STSUSPEND|Suspension|ACTIVE
+SUPERVISOR|Supervisor Change|ACTIVE
+TRMABS|INVOL-Absences/Tardiness|ACTIVE
+TRMBKGRD|INVOL-Background/Drug Fail|ACTIVE
+TRMCAREER|VOL-Career Opportunities|ACTIVE
+TRMCOMP|VOL-Dissatisfied with Pay|ACTIVE
+TRMCONTRT|INVOL-End of Contract|ACTIVE
+TRMDEC|INVOL-Deceased|ACTIVE
+TRMDIS|INVOL-Disabled|ACTIVE
+TRMDNR|VOL-First Day No Show|ACTIVE
+TRMFRAUD|INVOL-Fraud Violation|ACTIVE
+TRMFRL|VOL-Fail to RTN from LOA|ACTIVE
+TRMMA|INVOL-Mutual Agreement|ACTIVE
+TRMMIL|INVOL-Military/Civil Svc Leave|ACTIVE
+TRMNS|VOL-No Call No Show/JobAbandon|ACTIVE
+TRMPEINV|INVOL-Individual Position Elim|ACTIVE
+TRMPERF|INVOL-Performance|ACTIVE
+TRMPERS|VOL-Personal - Non Work Related|ACTIVE
+TRMPOLICY|INVOL-Conduct/Policy Violation|ACTIVE
+TRMPROB|INVOL-Incomplete Probation|ACTIVE
+TRMRELO|VOL-Relocation|ACTIVE
+TRMRET|VOL-Retired|ACTIVE
+TRMRIF|INVOL-Reduction in force|ACTIVE
+TRMSCH|VOL-Return to Education|ACTIVE
+TRMSCHED|VOL-Dissatisfied with Work Sched|ACTIVE
+TRMTEMP|INVOL-End of Temp Assignment|ACTIVE
+TRMTRAIN|INVOL-Failed Training|ACTIVE
+TRMWORK|VOL-Work related|ACTIVE
+LOA|Leave of Absence|ACTIVE

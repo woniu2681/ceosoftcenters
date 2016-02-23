@@ -1,0 +1,87 @@
+<PerPerson>
+  <personIdExternal>763688</personIdExternal>
+  <dateOfBirth>18-07-1980</dateOfBirth>
+  <Effective>
+    <EmpJob>
+      <startDate>30-11-2015</startDate>
+      <endDate>31-12-9999</endDate>
+      <seqNumber>1</seqNumber>
+      <costCenter>1300-US12-1000</costCenter>
+      <departmentName>Starbucks Coffee Company</departmentName>
+      <employeeClassCode>AF</employeeClassCode>
+      <event>R</event>
+      <locationCustomString1>USALB</locationCustomString1>
+      <locationName>Albuquerque, New Mexico</locationName>
+      <oracleString>1300-1300-US12-1000-1300-US12-1300-US12-1000-5050001</oracleString>
+    </EmpJob>
+    <EmpJob>
+      <startDate>22-07-2015</startDate>
+      <endDate>29-11-2015</endDate>
+      <seqNumber>1</seqNumber>
+      <costCenter>1300-US07-1000</costCenter>
+      <departmentName>Best Buy Computing Services</departmentName>
+      <employeeClassCode>AF</employeeClassCode>
+      <event>5</event>
+      <locationCustomString1>USGLS</locationCustomString1>
+      <locationName>Glasgow, Kentucky</locationName>
+      <oracleString>1300-1300-US07-1000-1300-US07-1300-US07-1000-5470001</oracleString>
+    </EmpJob>
+    <EmpJob>
+      <startDate>30-06-2015</startDate>
+      <endDate>09-07-2015</endDate>
+      <seqNumber>1</seqNumber>
+      <costCenter>1300-US07-1000</costCenter>
+      <customString4>stone</customString4>
+      <departmentName>Best Buy Computing Services</departmentName>
+      <employeeClassCode>AF</employeeClassCode>
+      <event>26</event>
+      <locationCustomString1>USGLS</locationCustomString1>
+      <locationName>Glasgow, Kentucky</locationName>
+      <oracleString>1300-1300-US07-1000-1300-US07-1300-US07-1000-5470001</oracleString>
+    </EmpJob>
+    <EmpJob>
+      <startDate>10-07-2015</startDate>
+      <endDate>21-07-2015</endDate>
+      <seqNumber>1</seqNumber>
+      <costCenter>1300-US07-1000</costCenter>
+      <departmentName>Best Buy Computing Services</departmentName>
+      <employeeClassCode>AF</employeeClassCode>
+      <event>5</event>
+      <locationCustomString1>USGLS</locationCustomString1>
+      <locationName>Glasgow, Kentucky</locationName>
+      <oracleString>1300-1300-US07-1000-1300-US07-1300-US07-1000-5470001</oracleString>
+    </EmpJob>
+    <EmpJob>
+      <startDate>12-03-2012</startDate>
+      <endDate>29-06-2015</endDate>
+      <seqNumber>1</seqNumber>
+      <costCenter>1300-US07-1000</costCenter>
+      <departmentName>Best Buy Computing Services</departmentName>
+      <employeeClassCode>AF</employeeClassCode>
+      <event>H</event>
+      <locationCustomString1>USGLS</locationCustomString1>
+      <locationName>Glasgow, Kentucky</locationName>
+      <oracleString>1300-1300-US07-1000-1300-US07-1300-US07-1000-5470001</oracleString>
+    </EmpJob>
+    <PerPersonal>
+      <startDate>12-03-2012</startDate>
+      <endDate>29-11-2015</endDate>
+      <employeeName>Aaron Charles TEST</employeeName>
+      <gender>M</gender>
+      <maritalStatusCode>S</maritalStatusCode>
+    </PerPersonal>
+    <PerPersonal>
+      <startDate>30-11-2015</startDate>
+      <endDate>31-12-9999</endDate>
+      <employeeName>Aaron Charles TEST</employeeName>
+      <gender>M</gender>
+      <maritalStatusCode>S</maritalStatusCode>
+    </PerPersonal>
+  </Effective>
+  <NoEffective>
+    <EmpEmployment>
+      <originalStartDate>12-03-2012</originalStartDate>
+      <startDate>30-11-2015</startDate>
+    </EmpEmployment>
+  </NoEffective>
+</PerPerson>

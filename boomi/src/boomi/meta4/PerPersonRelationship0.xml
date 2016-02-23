@@ -1,0 +1,27 @@
+<SFOData.PerPersonRelationship>
+   <relatedPersonIdExternal>27626_d54251</relatedPersonIdExternal>
+   <personIdExternal>90181</personIdExternal>
+   <lastName>Test</lastName>
+   <firstName>Test</firstName>
+   <relPersonNav>
+      <personIdExternal>27626_d54251</personIdExternal>
+      <dateOfBirth></dateOfBirth>
+      <lastModifiedOn>2015-09-28T09:10:55.000Z</lastModifiedOn>
+      <lastModifiedDateTime>2015-09-28T13:10:55.000Z</lastModifiedDateTime>
+      <dateOfDeath></dateOfDeath>
+      <createdOn>2015-09-28T09:10:55.000Z</createdOn>
+      <countryOfBirth></countryOfBirth>
+      <createdBy>90181</createdBy>
+      <createdDateTime>2015-09-28T13:10:55.000Z</createdDateTime>
+      <lastModifiedBy>90181</lastModifiedBy>
+      <personRerlationshipNav></personRerlationshipNav>
+      <emergencyContactNav></emergencyContactNav>
+      <phoneNav></phoneNav>
+      <personalInfoNav></personalInfoNav>
+      <homeAddressNavDEFLT></homeAddressNavDEFLT>
+      <nationalIdNav></nationalIdNav>
+      <countryOfBirthNav></countryOfBirthNav>
+      <emailNav></emailNav>
+      <employmentNav></employmentNav>
+   </relPersonNav>
+</SFOData.PerPersonRelationship>

@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<PositionList>
+  <Position>
+    <code>GLSH000032</code>
+    <company>1300</company>
+    <createdDateTime>2015-10-26</createdDateTime>
+    <cust_JobLevel2>JJ</cust_JobLevel2>
+    <department>V4212J</department>
+    <division>OPS</division>
+    <effectiveStartDate>1900-01-01</effectiveStartDate>
+    <effectiveEndDate>9999-12-31</effectiveEndDate>
+    <jobCode>OPG110US</jobCode>
+    <positionTitle>CSR In-Best Buy Per Minute</positionTitle>
+    <locationNav>
+      <customString1>USGLS</customString1>
+    </locationNav>
+  </Position>
+</PositionList>

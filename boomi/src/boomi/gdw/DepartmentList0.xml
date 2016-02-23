@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<DepartmentList>
+  <Department>
+    <externalCode>V4212J</externalCode>
+    <name>Best Buy HTAE</name>
+    <startDate>1900-01-01</startDate>
+    <endDate>9999-12-31</endDate>
+    <costCenter>1300-US07-1000</costCenter>
+  </Department>
+</DepartmentList>

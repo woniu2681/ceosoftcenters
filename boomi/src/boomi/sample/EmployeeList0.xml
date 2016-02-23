@@ -1,0 +1,16 @@
+<EmployeeList>
+  <Employee>
+    <personIdExternal>724033</personIdExternal>
+    <fullName>Nina  TEST</fullName>
+    <hireDate>2011-04-04</hireDate>
+    <location>1300-US07</location>
+    <test>2015-11-12 04:24:29.000</test>
+  </Employee>
+  <Employee>
+    <personIdExternal>776633</personIdExternal>
+    <fullName>Tommy  TEST</fullName>
+    <hireDate>2014-01-20</hireDate>
+    <location>1300-US07</location>
+    <test>2015-11-09 19:18:24.000</test>
+  </Employee>
+</EmployeeList>
