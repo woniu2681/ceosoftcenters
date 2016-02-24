@@ -19,16 +19,16 @@ import org.jdom.output.XMLOutputter;
 
 public class PerPersonXML {
   public static void main(String[] args) throws Exception {
+    SAXBuilder builder = new SAXBuilder();
+    XMLOutputter xmlOutputter = new XMLOutputter(Format.getPrettyFormat());
     SimpleDateFormat sdf1 = new SimpleDateFormat("dd-MM-yyyy");
     SimpleDateFormat sdf2 = new SimpleDateFormat("yyyy-MM-dd");
     Date tempLastRunDate = sdf2.parse("2014-01-01");
     Date tempCurrentRunDate = sdf2.parse("2016-01-01");
     // Date tempLastRunDate = sdf2.parse(ExecutionUtil.getDynamicProcessProperty("TempLastRunDate"));
     // Date tempCurrentRunDate = sdf2.parse(ExecutionUtil.getDynamicProcessProperty("TempCurrentRunDate"));
-    XMLOutputter xmlOutputter = new XMLOutputter(Format.getPrettyFormat());
 
     for (int i = 0; i < 1; i++) {
-      SAXBuilder builder = new SAXBuilder();
       Document doc = builder.build(new FileInputStream("src/boomi/hewitt/PerPerson.xml"));
       Element root = doc.getRootElement();
 
@@ -68,6 +68,7 @@ public class PerPersonXML {
       }
 
       List<Element> outputList = new ArrayList<Element>();
+      boolean noneEMC = false;
 
       for (Date effectiveDate : employeeTreeMap.keySet()) {
         Element currentEmployeeElement = employeeTreeMap.get(effectiveDate);
@@ -84,13 +85,17 @@ public class PerPersonXML {
             String currentEmpJobCustomString4 = currentEmpJobElement.getChildText("customString4");
 
             if (currentEmpJobEvent.equals("H") && effectiveDate.compareTo(sdf1.parse(currentEmpJobStartDateStr)) == 0) {
-              currentEmployeeElement.addContent(new Element("category").setText("NEW"));
-              currentEmployeeElement.addContent(new Element("effectiveDate").setText(sdf1.format(effectiveDate)));
-              outputList.add(currentEmployeeElement);
+              Element newEmployeeElement = employeeTreeMap.lastEntry().getValue();
+              newEmployeeElement.addContent(new Element("category").setText("NEW"));
+              newEmployeeElement.addContent(new Element("effectiveDate").setText(sdf1.format(effectiveDate)));
+              outputList.add(newEmployeeElement);
+              noneEMC = true;
             } else if (currentEmpJobEvent.equals("R") && effectiveDate.compareTo(sdf1.parse(currentEmpJobStartDateStr)) == 0) {
-              currentEmployeeElement.addContent(new Element("category").setText("REH"));
-              currentEmployeeElement.addContent(new Element("effectiveDate").setText(sdf1.format(effectiveDate)));
-              outputList.add(currentEmployeeElement);
+              Element newEmployeeElement = employeeTreeMap.lastEntry().getValue();
+              newEmployeeElement.addContent(new Element("category").setText("REH"));
+              newEmployeeElement.addContent(new Element("effectiveDate").setText(sdf1.format(effectiveDate)));
+              outputList.add(newEmployeeElement);
+              noneEMC = true;
             } else if (currentEmpJobEvent.equals("26") && effectiveDate.compareTo(sdf1.parse(currentEmpJobStartDateStr)) == 0) {
               Element newEmployeeElement = new Element("Employee");
               newEmployeeElement.addContent((Element) personIdExternal.clone());
@@ -98,6 +103,7 @@ public class PerPersonXML {
               newEmployeeElement.addContent(new Element("effectiveDate").setText(sdf1.format(effectiveDate)));
               newEmployeeElement.addContent(new Element("EmpJob").addContent(new Element("customString4").setText(currentEmpJobCustomString4)));
               outputList.add(newEmployeeElement);
+              noneEMC = true;
             } else {
               if (employeeTreeMap.lowerEntry(effectiveDate) != null) {
                 Element previousEmployeeElement = employeeTreeMap.lowerEntry(effectiveDate).getValue();
@@ -115,18 +121,18 @@ public class PerPersonXML {
                   outputList.add(currentEmployeeElement);
                 } else {
                   Element newEmployeeElement = new Element("Employee");
-
                   TreeSet<Date> dateTreeSet = new TreeSet<Date>();
 
+                  Element newEmpJobElement = new Element("EmpJob");
                   if (currentEmpJobElement != null) {
-                    Element newEmpJobElement = (Element) currentEmpJobElement.clone();
+                    newEmpJobElement = (Element) currentEmpJobElement.clone();
                     List<Element> currentEmpJobChildren = currentEmpJobElement.getChildren();
                     boolean isChanged = false;
                     for (Element currentChildElement : currentEmpJobChildren) {
                       String currentChildElementName = currentChildElement.getName();
                       String currentChildElementText = currentChildElement.getText();
                       String previousChildElementText = previousEmpJobElement != null ? previousEmpJobElement.getChildText(currentChildElementName) : "";
-                      if (!currentChildElementName.equals("startDate") && !currentChildElementName.equals("endDate") && !currentChildElementName.equals("seqNumber") && !currentChildElementName.equals("customString4") && !currentChildElementName.equals("event") && !currentChildElementName.equals("employeeClassCode")) {
+                      if (!currentChildElementName.equals("startDate") && !currentChildElementName.equals("endDate") && !currentChildElementName.equals("seqNumber") && !currentChildElementName.equals("customString4") && !currentChildElementName.equals("employeeClassCode") && !currentChildElementName.equals("emplStatusCode") && !currentChildElementName.equals("event") && !currentChildElementName.equals("locationCode")) {
                         if (previousChildElementText.equals(currentChildElementText)) {
                           newEmpJobElement.removeChild(currentChildElementName);
                         } else {
@@ -191,6 +197,9 @@ public class PerPersonXML {
                     newEmployeeElement.addContent((Element) personIdExternal.clone());
                     newEmployeeElement.addContent(new Element("category").setText("EMC"));
                     newEmployeeElement.addContent(new Element("effectiveDate").setText(sdf1.format(dateTreeSet.last())));
+                    if (newEmployeeElement.getChild("EmpJob") == null) {
+                      newEmployeeElement.addContent(newEmpJobElement);
+                    }
                     outputList.add(newEmployeeElement);
                   }
                 }
@@ -201,10 +210,9 @@ public class PerPersonXML {
       }
 
       if (outputList != null && !outputList.isEmpty()) {
-        Element first = outputList.get(0);
-        Element last = outputList.get(outputList.size() - 1);
-        if ((first.getChildText("category").equals("H") || first.getChildText("category").equals("REH")) && last.getChildText("category").equals("R")) {
-          for (int j = 1; j < outputList.size() - 1; j++) {
+        for (int j = 0; j < outputList.size(); j++) {
+          Element e = outputList.get(j);
+          if (e.getChildText("category").equals("EMC") && noneEMC) {
             outputList.remove(j);
           }
         }
@@ -213,6 +221,7 @@ public class PerPersonXML {
           InputStream os = new ByteArrayInputStream(xmlOutputter.outputString(output).getBytes("UTF-8"));
           System.out.println(xmlOutputter.outputString(output));
         }
+
       }
     }
   }
