@@ -103,7 +103,6 @@ public class PerPersonXML {
               newEmployeeElement.addContent(new Element("effectiveDate").setText(sdf1.format(effectiveDate)));
               newEmployeeElement.addContent(new Element("EmpJob").addContent(new Element("customString4").setText(currentEmpJobCustomString4)));
               outputList.add(newEmployeeElement);
-              noneEMC = true;
             } else {
               if (employeeTreeMap.lowerEntry(effectiveDate) != null) {
                 Element previousEmployeeElement = employeeTreeMap.lowerEntry(effectiveDate).getValue();
