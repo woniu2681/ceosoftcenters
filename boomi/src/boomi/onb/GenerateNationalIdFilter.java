@@ -13,7 +13,7 @@ import org.jdom.input.SAXBuilder;
 import org.jdom.output.Format;
 import org.jdom.output.XMLOutputter;
 
-public class PerNationalId {
+public class GenerateNationalIdFilter {
   public static void main(String[] args) throws Exception {
     SAXBuilder builder = new SAXBuilder();
     XMLOutputter xmlOutputter = new XMLOutputter(Format.getPrettyFormat());
@@ -453,19 +453,22 @@ public class PerNationalId {
         break;
       }
 
+      String filter = "personIdExternal eq null";
       if (list != null && !list.isEmpty()) {
-        for (Map<String, String> m : list) {
-          if (nationalId != null && !nationalId.isEmpty()) {
-            Element perNationalId = new Element("SFOData.PerNationalId");
-            perNationalId.addContent(new Element("cardType").setText(m.get("cardType")));
-            perNationalId.addContent(new Element("country").setText(m.get("country")));
-            perNationalId.addContent(new Element("isPrimary").setText("false"));
-            perNationalId.addContent(new Element("nationalId").setText(m.get("nationalId")));
-            InputStream os = new ByteArrayInputStream(xmlOutputter.outputString(perNationalId).getBytes("UTF-8"));
-            System.out.println(xmlOutputter.outputString(perNationalId));
+        filter = "nationalIdNav/country eq '" + country + "' and (";
+        for (int j = 0; j < list.size(); j++) {
+          Map<String, String> m = list.get(j);
+          if (j == 0) {
+            filter = filter + "(nationalIdNav/cardType eq '" + m.get("cardType") + "' and nationalIdNav/nationalId eq '" + m.get("nationalId") + "')";
+          } else {
+            filter = filter + "or (nationalIdNav/cardType eq '" + m.get("cardType") + "' and nationalIdNav/nationalId eq '" + m.get("nationalId") + "')";
           }
         }
+        filter = filter + ")";
       }
+      System.out.println(filter);
     }
+    InputStream os = new ByteArrayInputStream(xmlOutputter.outputString(doc).getBytes("UTF-8"));
+    System.out.println(xmlOutputter.outputString(doc));
   }
 }

@@ -1,28 +1,28 @@
 <OnboardingDataExchange>
-  <HRDataId>f645da50-0462-4151-b001-26794d718701</HRDataId>
-  <FirstName>Antonije</FirstName>
-  <LastName>Lukic</LastName>
+  <HRDataId>ed8b1957-c767-4b2f-8d71-b2a414c5c8e2</HRDataId>
+  <FirstName>Samantha</FirstName>
+  <LastName>Sitel</LastName>
   <MiddleName />
   <Suffix>-</Suffix>
-  <EMail>antonije@myemail.com</EMail>
-  <DateOfBirth>1984-10-15</DateOfBirth>
-  <Address1>1652 Independance Av</Address1>
+  <EMail>samantha.miller@sitel.com</EMail>
+  <DateOfBirth>1980-02-11</DateOfBirth>
+  <Address1>My Street 123</Address1>
   <Address2 />
   <Address3 />
   <Address4 />
   <Apartment />
-  <City>Washington DC</City>
-  <State>District of Columbia</State>
-  <Zip>20003</Zip>
+  <City>Washington</City>
+  <State />
+  <Zip />
   <Zip4 />
-  <Country>USA</Country>
-  <EveningPhoneAC />
-  <DaytimePhoneNum>858-6453</DaytimePhoneNum>
-  <EveningPhoneNum />
+  <Country>gb</Country>
+  <EveningPhoneAC>202</EveningPhoneAC>
+  <DaytimePhoneNum>234-5678</DaytimePhoneNum>
+  <EveningPhoneNum>547-6974</EveningPhoneNum>
   <MailAddress />
   <DaytimePhoneCountryCode />
-  <DaytimePhoneAC>188</DaytimePhoneAC>
-  <EveningPhoneCountryCode />
+  <DaytimePhoneAC>1</DaytimePhoneAC>
+  <EveningPhoneCountryCode>1</EveningPhoneCountryCode>
   <MailAddress2 />
   <MailApartment />
   <MailCity />
@@ -30,24 +30,24 @@
   <MailZip />
   <MailZip4 />
   <MailCountry />
-  <WOTCStartDate>2015-10-20</WOTCStartDate>
-  <HireDate>2015-10-15</HireDate>
+  <WOTCStartDate>2016-02-29</WOTCStartDate>
+  <HireDate>2016-02-25</HireDate>
   <OrientationDate />
   <OrientationTime />
-  <DivCode>Sitel Operating Corporation (1300)</DivCode>
-  <LocDistrict>Human Resources (HRS)</LocDistrict>
-  <LocNumber>HR Shared Services (HRSS)</LocNumber>
-  <DeptCode>Action (PT) Mktg Telefonica,SA Virtual (3350-VIRT)</DeptCode>
+  <DivCode>Sitel UK Limited (3002)</DivCode>
+  <LocDistrict>Operations EMEA (OPE)</LocDistrict>
+  <LocNumber>Operations (OPS)</LocNumber>
+  <DeptCode>Exeter, UK (3002-GB01)</DeptCode>
   <JobCode />
-  <HiringManager>recdd1</HiringManager>
+  <HiringManager />
   <Recruiter>recrr1</Recruiter>
-  <HRManager>rechh4</HRManager>
+  <HRManager>rechh3</HRManager>
   <JobPayClass />
   <JobPermTemp />
-  <JobPayType>Hourly</JobPayType>
+  <JobPayType>2716</JobPayType>
   <JobAccountCode />
-  <JobPayRate>2000.0</JobPayRate>
-  <JobPayRatePer>Week</JobPayRatePer>
+  <JobPayRate>12345.0</JobPayRate>
+  <JobPayRatePer>Month</JobPayRatePer>
   <FLSAStatus />
   <EmployeeId />
   <WorkState />
@@ -82,10 +82,10 @@
   <GlobalSwiftCode_2 />
   <GlobalSwiftCode_3 />
   <GlobalSortCode1 />
-  <GlobalSortCode_1 />
+  <GlobalSortCode_1>20-13-34</GlobalSortCode_1>
   <GlobalSortCode_2 />
   <GlobalSortCode_3 />
-  <GlobalRoutingNum1>12312312312</GlobalRoutingNum1>
+  <GlobalRoutingNum1 />
   <GlobalRoutingNum_1 />
   <GlobalRoutingNum_2 />
   <GlobalRoutingNum_3 />
@@ -99,24 +99,24 @@
   <GlobalDomiciliation_1 />
   <GlobalDomiciliation_2 />
   <GlobalDomiciliation_3 />
-  <GlobalDeposit_1>Partial Amount</GlobalDeposit_1>
-  <GlobalDeposit_2>Full</GlobalDeposit_2>
-  <GlobalDeposit_3>Balance</GlobalDeposit_3>
+  <GlobalDeposit_1 />
+  <GlobalDeposit_2 />
+  <GlobalDeposit_3 />
   <GlobalControl_1 />
   <GlobalControl_2 />
   <GlobalControl_3 />
   <GlobalBranchcode_1 />
   <GlobalBranchcode_2 />
   <GlobalBranchcode_3 />
-  <GlobalBankName_1>Bank</GlobalBankName_1>
+  <GlobalBankName_1>Barclays</GlobalBankName_1>
   <GlobalBankName_2 />
   <GlobalBankName_3 />
   <GlobalBankInstitution_1 />
   <GlobalBankInstitution_2 />
   <GlobalBankInstitution_3 />
-  <GlobalBankCountry_1>GBR</GlobalBankCountry_1>
-  <GlobalBankCountry_2>GBR</GlobalBankCountry_2>
-  <GlobalBankCountry_3>GBR</GlobalBankCountry_3>
+  <GlobalBankCountry_1 />
+  <GlobalBankCountry_2 />
+  <GlobalBankCountry_3 />
   <GlobalBankcode_1 />
   <GlobalBankcode_2 />
   <GlobalBankcode_3 />
@@ -258,7 +258,7 @@
   <GlobalBankAddress_1 />
   <GlobalBankAddress_2 />
   <GlobalBankAddress_3 />
-  <GlobalAmount_1>9999</GlobalAmount_1>
+  <GlobalAmount_1 />
   <GlobalAmount_2 />
   <GlobalAmount_3 />
   <GlobalAccountType_1 />
@@ -267,9 +267,9 @@
   <GlobalAccountName_1 />
   <GlobalAccountName_2 />
   <GlobalAccountName_3 />
-  <GlobalAccount_1>2287723879</GlobalAccount_1>
-  <GlobalAccount_2>4556435165</GlobalAccount_2>
-  <GlobalAccount_3>87895618489</GlobalAccount_3>
+  <GlobalAccount_1>50786755</GlobalAccount_1>
+  <GlobalAccount_2 />
+  <GlobalAccount_3 />
   <StateWithholding_WV_WV_IT_104_txtExemptionTotal />
   <StateWithholding_WV_WV_IT_104_txtAddlWHAmt />
   <StateWithholding_WV_WV_IT_104_chbPercentageAmt />
@@ -913,7 +913,7 @@
   <W4TotalAllow />
   <W4MaritalStatus />
   <W4IsExempt />
-  <SSN>789-53-6848</SSN>
+  <SSN />
   <CANAmount2 />
   <CANAmount1 />
   <CANAmount />
@@ -923,9 +923,9 @@
   <GlobalNIDPortug />
   <GlobalNIDPol />
   <GlobalNIDPH />
-  <GlobalNIDPana>45-6878-45131-54</GlobalNIDPana>
+  <GlobalNIDPana />
   <GlobalNIDNZ />
-  <GlobalNIDNumUK />
+  <GlobalNIDNumUK>JA 30 77 55 B</GlobalNIDNumUK>
   <GlobalNIDNumSpai2 />
   <GlobalNIDNumSpai1 />
   <GlobalNIDNumSpai />
@@ -945,12 +945,12 @@
   <GlobalNIDNumBelg1 />
   <GlobalNIDNumBelg />
   <GlobalNIDNum />
-  <GlobalNIDNo>sfthdgdgdr</GlobalNIDNo>
+  <GlobalNIDNo />
   <GlobalNIDNicha />
   <GlobalNIDNether />
   <GlobalNIDMorc />
   <GlobalNIDMex />
-  <GlobalNID>No</GlobalNID>
+  <GlobalNID>Yes</GlobalNID>
   <GlobalNIDNumSpai3 />
   <GlobalNIDNumMex1 />
   <GlobalNIDNumMex />
