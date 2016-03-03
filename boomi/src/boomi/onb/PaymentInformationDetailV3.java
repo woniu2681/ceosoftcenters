@@ -20,6 +20,8 @@ public class PaymentInformationDetailV3 {
     SAXBuilder builder = new SAXBuilder();
     XMLOutputter xmlOutputter = new XMLOutputter(Format.getPrettyFormat());
     TreeMap<String, List<String>> map = new TreeMap<String, List<String>>();
+    String USA = "United States";
+    String CAN = "Canada";
 
     for (int i = 0; i < 2; i++) {
       if (i == 0) {
@@ -52,8 +54,13 @@ public class PaymentInformationDetailV3 {
               if (directDepositList.get(j).equals("1")) {
                 String source = sourceList.get(j);
                 String target = targetList.get(j);
-                if (source != null && source.equals("GlobalDeposit")) {
+                if (target != null && target.equals("cust_depositType")) {
                   String deposit1 = root.getChildText("GlobalDeposit_1");
+                  if (sitelCountry != null && sitelCountry.equals(USA)) {
+                    deposit1 = root.getChildText("USDDDeposit");
+                  } else if (sitelCountry != null && sitelCountry.equals(CAN)) {
+                    deposit1 = root.getChildText("CADDDeposit");
+                  }
                   switch (deposit1) {
                   case "Partial Amount":
                     account1.addContent(new Element("cust_depositType").setText("percentage"));
@@ -71,6 +78,11 @@ public class PaymentInformationDetailV3 {
                     break;
                   }
                   String deposit2 = root.getChildText("GlobalDeposit_2");
+                  if (sitelCountry != null && sitelCountry.equals(USA)) {
+                    deposit2 = root.getChildText("USDDDeposit1");
+                  } else if (sitelCountry != null && sitelCountry.equals(CAN)) {
+                    deposit2 = root.getChildText("CADDDeposit1");
+                  }
                   switch (deposit2) {
                   case "Partial":
                     account2.addContent(new Element("cust_depositType").setText("percentage"));
@@ -105,9 +117,57 @@ public class PaymentInformationDetailV3 {
                     break;
                   }
                 } else {
-                  account1.addContent(new Element(target).setText(root.getChildText(source + "_1")));
-                  account2.addContent(new Element(target).setText(root.getChildText(source + "_2")));
-                  account3.addContent(new Element(target).setText(root.getChildText(source + "_3")));
+                  if (sitelCountry != null && sitelCountry.equals(USA)) {
+                    switch (target) {
+                    case "routingNumber":
+                      source = "DDBank1RoutNum";
+                      break;
+                    case "cust_bankName":
+                      source = "DDAccount1TypeText";
+                      break;
+                    case "accountType":
+                      source = "DDAccount1Type";
+                      break;
+                    case "amount":
+                      source = "Sitel_DDAmount";
+                      break;
+                    case "accountNumber":
+                      source = "Sitel_DDAcctNum";
+                      break;
+                    default:
+                      break;
+                    }
+                  } else if (sitelCountry != null && sitelCountry.equals(CAN)) {
+                    switch (target) {
+                    case "cust_transitNumer":
+                      source = "CADDTransit";
+                      break;
+                    case "cust_bankInstitutionCAN":
+                      source = "CADDInstitution";
+                      break;
+                    case "cust_bankName":
+                      source = "CADDBankName";
+                      break;
+                    case "accountNumber":
+                      source = "CADDAccount";
+                      break;
+                    case "bankCountry":
+                      source = "BankCountry";
+                      break;
+                    case "amount":
+                      source = "CANAmount";
+                      break;
+                    default:
+                      break;
+                    }
+                    account1.addContent(new Element(target).setText(root.getChildText(source)));
+                    account2.addContent(new Element(target).setText(root.getChildText(source + "_1")));
+                    account3.addContent(new Element(target).setText(root.getChildText(source + "_2")));
+                  } else {
+                    account1.addContent(new Element(target).setText(root.getChildText(source + "_1")));
+                    account2.addContent(new Element(target).setText(root.getChildText(source + "_2")));
+                    account3.addContent(new Element(target).setText(root.getChildText(source + "_3")));
+                  }
                 }
               }
             }
