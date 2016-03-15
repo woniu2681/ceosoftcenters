@@ -1,55 +1,86 @@
 package boomi.hewitt;
 
-import java.io.ByteArrayInputStream;
 import java.io.FileInputStream;
-import java.io.InputStream;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
+import java.util.TreeMap;
 
 import org.jaxen.jdom.JDOMXPath;
 import org.jdom.Document;
 import org.jdom.Element;
 import org.jdom.input.SAXBuilder;
+import org.jdom.output.Format;
+import org.jdom.output.XMLOutputter;
 
 public class PayComponentXML {
   public static void main(String[] args) throws Exception {
     SAXBuilder builder = new SAXBuilder();
-    JDOMXPath badgeNumberXPath = new JDOMXPath("/PerPerson/Current/EmpJob/customString4");
-    JDOMXPath compensationXPath = new JDOMXPath("/PerPerson/History/EmpCompensation/*");
+    XMLOutputter xmlOutputter = new XMLOutputter(Format.getPrettyFormat());
+
+    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+    Date tempLastRunDate = sdf.parse("2010-01-01");
+    Date tempCurrentRunDate = sdf.parse("2016-03-15");
+    // Date tempLastRunDate = sdf.parse(ExecutionUtil.getDynamicProcessProperty("TempLastRunDate"));
+    // Date tempCurrentRunDate = sdf.parse(ExecutionUtil.getDynamicProcessProperty("TempCurrentRunDate"));
+    String[] payComponentCodeList = "STAT BON,BSP,COACH,CON,IN-CSTMR,ESIC,IN-FUNALLOW,GRAT,HRA,LTA,MGRALLOW,MEDDED,IN-MED,Perform,PETRO,PROV,IN-SKILL ALLOW".split(",");
 
     for (int i = 0; i < 1; i++) {
       Document doc = builder.build(new FileInputStream("src/boomi/hewitt/PerPerson_New.xml"));
       Element root = doc.getRootElement();
-      String personIdExternal = root.getChildText("personIdExternal");
 
-      Element badgeNumberElement = (Element) badgeNumberXPath.selectSingleNode(doc);
-      String badgeNumber = badgeNumberElement != null ? badgeNumberElement.getText() : null;
+      if (payComponentCodeList != null && payComponentCodeList.length > 0) {
+        Element empCompensation = new Element("EmpCompensation");
 
-      List<Element> list = compensationXPath.selectNodes(root);
-      for (Element e : list) {
-        if (!e.getName().equals("EmpPayCompRecurring")) {
-          continue;
+        for (String payComponentCode : payComponentCodeList) {
+          JDOMXPath empPayCompRecurringXPath = new JDOMXPath("/PerPerson/History/EmpCompensation/EmpPayCompRecurring[payComponentCode='" + payComponentCode + "']");
+          List<Element> empPayCompRecurringList = empPayCompRecurringXPath.selectNodes(doc);
+
+          if (empPayCompRecurringList != null && !empPayCompRecurringList.isEmpty()) {
+            TreeMap<Date, Element> empPayCompRecurringTreeMap = new TreeMap<Date, Element>();
+
+            for (Element element : empPayCompRecurringList) {
+              String startDateStr = element.getChildText("startDate");
+              Date startDate = sdf.parse(startDateStr);
+              empPayCompRecurringTreeMap.put(startDate, element);
+            }
+
+            if (empPayCompRecurringTreeMap != null && !empPayCompRecurringTreeMap.isEmpty()) {
+              Element empPayCompRecurring = new Element("EmpPayCompRecurring");
+
+              for (Date date : empPayCompRecurringTreeMap.keySet()) {
+                Element current = empPayCompRecurringTreeMap.get(date);
+                Element previous = empPayCompRecurringTreeMap.lowerEntry(date) != null ? empPayCompRecurringTreeMap.lowerEntry(date).getValue() : null;
+                Element next = empPayCompRecurringTreeMap.higherEntry(date) != null ? empPayCompRecurringTreeMap.higherEntry(date).getValue() : null;
+
+                if (date.compareTo(tempLastRunDate) >= 0 && date.compareTo(tempCurrentRunDate) < 0) {
+                  if (previous == null && next == null) {
+                    empPayCompRecurring = (Element) current.clone();
+                  } else {
+                    if (previous != null) {
+                      String paycompvalueCurrent = current.getChildText("paycompvalue");
+                      String paycompvaluePrevious = previous.getChildText("paycompvalue");
+
+                      if (!paycompvalueCurrent.equals(paycompvaluePrevious)) {
+                        empPayCompRecurring = (Element) current.clone();
+                      }
+                    }
+                  }
+                }
+              }
+
+              if (empPayCompRecurring != null && empPayCompRecurring.getContentSize() > 0) {
+                empCompensation.addContent(empPayCompRecurring);
+              }
+            }
+          }
         }
 
-        String payCode = e.getChildText("payComponentCode");
-        String payName = e.getChildText("payComponentName");
-        String payValue = e.getChildText("paycompvalue");
-        String payDate = e.getChildText("startDate");
-
-        StringBuffer payRecord = new StringBuffer();
-        payRecord.append("EARN");
-        payRecord.append("|");
-        payRecord.append(("".equals(badgeNumber) || badgeNumber == null) ? personIdExternal : badgeNumber);
-        payRecord.append("|");
-        payRecord.append(payCode != null ? payCode : "");
-        payRecord.append("|");
-        payRecord.append(payName != null ? payName : "");
-        payRecord.append("|");
-        payRecord.append(payDate != null ? payDate : "");
-        payRecord.append("|");
-        payRecord.append(payValue != null ? payValue : "");
-
-        InputStream os = new ByteArrayInputStream(payRecord.toString().getBytes("UTF-8"));
-        System.out.println(payRecord.toString());
+        if (empCompensation != null && empCompensation.getContentSize() > 0) {
+          root.getChild("History").removeChildren("EmpCompensation");
+          root.getChild("History").addContent(empCompensation);
+          System.out.println(xmlOutputter.outputString(root));
+        }
       }
     }
   }
